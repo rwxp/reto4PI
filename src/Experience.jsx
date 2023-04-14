@@ -8,22 +8,22 @@ import {
   DirectionalLightHelper,
   PointLightHelper,
   HemisphereLightHelper,
-  // RectAreaLightHelper,
   SpotLightHelper,
 } from 'three';
+import { RectAreaLightHelper } from 'three/examples/jsm/helpers/RectAreaLightHelper.js';
 
 export default function Experience() {
   // const directionalLightRef = useRef();
   // const hemisphereLightRef = useRef();
-  // const pointLightRef = useRef();
-  // const rectAreaRef = useRef();
-  const spotLightRef = useRef();
+  const pointLightRef = useRef();
+  // const rectLightRef = useRef();
+  // const spotLightRef = useRef();
 
   // useHelper(directionalLightRef, DirectionalLightHelper, 1);
   // useHelper(hemisphereLightRef, HemisphereLightHelper, 1);
-  // useHelper(pointLightRef, PointLightHelper, 1);
-  // useHelper(rectAreaRef, RectAreaLightHelper, 1);
-  useHelper(spotLightRef, SpotLightHelper, 1);
+  useHelper(pointLightRef, PointLightHelper, 1);
+  // useHelper(rectLightRef, RectAreaLightHelper, 1);
+  // useHelper(spotLightRef, SpotLightHelper, 1);
 
   return (
     <>
@@ -43,17 +43,18 @@ export default function Experience() {
         position={[0, 2, -10]}
         intensity={5}
       /> */}
-      {/* <pointLight
+      <pointLight
         ref={pointLightRef}
         castShadow
         position={[0, 2, -10]}
         intensity={1.5}
-      /> */}
+      />
       {/* <rectAreaLight
-        ref={rectAreaRef}
+        ref={rectLightRef}
         castShadow
-        position={[0, 2, -10]}
-        intensity={1.5}
+        position={[0, 3, -5]}
+        intensity={2.5}
+        color="red"
       /> */}
       {/* <spotLight
         ref={spotLightRef}
